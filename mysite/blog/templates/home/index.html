@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Title goes here</title>
+</head>
+<body>
+{% if latest_posts %}
+    {% for post in latest_posts %}
+        <a href="{% url 'blog:details' post.id %}">{{ post.post_title }}</a>
+    {% endfor %}
+{% else %}
+    <h1>No Questions for now</h1>
+{% endif %}
+</body>
+</html>
